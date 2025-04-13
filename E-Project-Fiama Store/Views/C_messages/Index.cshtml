@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Fiama_Shop.Models.C_messages>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<h2>Messages</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.C_messages1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_messages1)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.mesid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.mesid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.mesid })
+        </td>*@
+    </tr>
+}
+
+</table>
